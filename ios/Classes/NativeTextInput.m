@@ -34,7 +34,8 @@
         _textView.textContainer.maximumNumberOfLines = [args[@"maxLines"] intValue];
         _textView.textContainer.lineBreakMode = NSLineBreakByCharWrapping;
         
-        if (![_textView.text  isEqualToString:@""]) {
+        //bug fix
+        if ([_textView.text  isEqualToString:@""]) {
             _textView.text = args[@"placeholder"];
             _textView.textColor = UIColor.lightGrayColor;
         }
