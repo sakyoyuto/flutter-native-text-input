@@ -27,7 +27,7 @@
         _textView.text = args[@"text"];
         _textView.textColor = UIColor.blackColor;
         
-        _textView.font = [UIFont systemFontOfSize:16];
+        _textView.font = [UIFont systemFontOfSize:18];
         _textView.backgroundColor = UIColor.clearColor;
         _textView.keyboardType = [self keyboardTypeFromString:args[@"keyboardType"]];
         _textView.textAlignment = [self textAlignmentFromString:args[@"textAlign"]];
