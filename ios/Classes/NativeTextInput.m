@@ -83,6 +83,12 @@
 
 - (void)onSetText:(FlutterMethodCall*)call result:(FlutterResult)result {
     _textView.text = call.arguments[@"text"];
+    //bug fix
+        if([call.arguments[@"text"]  isEqualToString:@""]) {
+            _textView.textColor = UIColor.lightGrayColor;
+        } else {
+            _textView.textColor = UIColor.blackColor;
+        }
     result(nil);
 }
 
