@@ -35,7 +35,7 @@
         _textView.textContainer.lineBreakMode = NSLineBreakByCharWrapping;
         
         //bug fix
-        if ([_textView.text  isEqualToString:@""]) {
+        if ([_textView.text  isEqualToString:@""] || [args[@"text"]  isEqualToString:@""] ) {
             _textView.text = args[@"placeholder"];
             _textView.textColor = UIColor.lightGrayColor;
         }
