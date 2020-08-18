@@ -227,6 +227,7 @@ class _NativeTextInputState extends State<NativeTextInput> {
 
   void _inputFinished(String text) {
     if (widget?.onSubmitted != null) {
+      if (widget.controller != null) _effectiveController.text = text;
       widget.onSubmitted(text);
     }
   }
@@ -241,7 +242,8 @@ class _NativeTextInputState extends State<NativeTextInput> {
         });
 
       if (widget?.onChanged != null) widget.onChanged(text);
-      if (widget.controller != null) _effectiveController.text = text;
+      //crash when voice input(ios)
+      //if (widget.controller != null) _effectiveController.text = text;
     }
   }
 
