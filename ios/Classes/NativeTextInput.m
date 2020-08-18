@@ -37,6 +37,9 @@
         //bug fix
         if ([_textView.text  isEqualToString:@""] || [args[@"text"]  isEqualToString:@""] ) {
             _textView.text = args[@"placeholder"];
+        }
+        
+        if([_textView.text  isEqualToString:args[@"placeholder"]]) {
             _textView.textColor = UIColor.lightGrayColor;
         }
         
