@@ -21,8 +21,12 @@
         _viewId = viewId;
         
         _textView = [[UITextView alloc] initWithFrame:frame];
-        _textView.text = args[@"placeholder"];
-        _textView.textColor = UIColor.lightGrayColor;
+        //_textView.text = args[@"placeholder"];
+        //_textView.textColor = UIColor.lightGrayColor;
+        
+        _textView.text = args[@"text"];
+        _textView.textColor = UIColor.blackColor;
+        
         _textView.font = [UIFont systemFontOfSize:16];
         _textView.backgroundColor = UIColor.clearColor;
         _textView.keyboardType = [self keyboardTypeFromString:args[@"keyboardType"]];
@@ -30,9 +34,9 @@
         _textView.textContainer.maximumNumberOfLines = [args[@"maxLines"] intValue];
         _textView.textContainer.lineBreakMode = NSLineBreakByCharWrapping;
         
-        if (![args[@"text"] isEqualToString:@""]) {
-            _textView.text = args[@"text"];
-            _textView.textColor = UIColor.blackColor;
+        if (![_textView.text  isEqualToString:@""]) {
+            _textView.text = args[@"placeholder"];
+            _textView.textColor = UIColor.lightGrayColor;
         }
         
         
