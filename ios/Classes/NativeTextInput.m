@@ -39,7 +39,7 @@
             _textView.text = args[@"placeholder"];
         }
         
-        if(![_textView.text  isEqualToString:args[@"placeholder"]]) {
+        if([_textView.text  isEqualToString:args[@"placeholder"]] && [args[@"text"]  isEqualToString:@""]) {
             _textView.textColor = UIColor.lightGrayColor;
         }
         
